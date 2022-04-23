@@ -1,0 +1,41 @@
+{
+  "name": "element-grouper",
+  "version": "0.0.1",
+  "description": "Coding exercise",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .ts .",
+    "test": "jest"
+  },
+  "author": "Leo Currie <leo.currie@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.20",
+    "@typescript-eslint/eslint-plugin": "^5.20",
+    "@tsconfig/node16": "^1.0",
+    "@types/node": "^16",
+    "@types/jest": "^27",
+    "eslint": "^8.13",
+    "ts-jest": "^27",
+    "typescript": "^4.6"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules",
+      "/src/index.ts",
+      "/src/example.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90
+      }
+    }
+  }
+}
