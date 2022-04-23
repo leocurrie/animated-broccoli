@@ -11,7 +11,7 @@ export function groupArrayElements<T>(
   numGroups: number
 ): T[][] {
   // input validation
-  if (!sourceArray) {
+  if (!Array.isArray(sourceArray)) {
     throw new Error('sourceArray cannot be null');
   }
 

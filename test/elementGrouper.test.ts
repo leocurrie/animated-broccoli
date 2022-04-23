@@ -11,6 +11,7 @@ describe('elementGrouper', () => {
   describe.each`
     description                       | sourceArray  | numGroups
     ${'source array is null'}         | ${null}      | ${1}
+    ${'source array is not an array'} | ${'foo'}     | ${10}
     ${'group size == 0'}              | ${[1, 2, 3]} | ${0}
     ${'group size < 0'}               | ${[1, 2, 3]} | ${-2}
     ${'group size is not an integer'} | ${[1, 2, 3]} | ${3.14}
